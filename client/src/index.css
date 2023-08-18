@@ -17,17 +17,51 @@
 
 /* Colors and initialize font size */
 :root {
-  /* Colors */
-
   /* Fonts */
   font-size: 62.5%;
-  color: var(--white);
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+
+  /* Colors */
+  --color-text: hsl(0deg, 0%, 100%);
+  --color-text-muted: hsl(200, 18%, 51%);
+  --color-background: hsl(210deg, 30%, 8%);
+  --color-background-secondary: hsl(210deg, 30%, 12%);
+
+  /* Shades */
+  --color-gray-100: hsl(210deg, 15%, 20%);
+  --color-gray-200: hsl(210deg, 15%, 25%);
+  --color-gray-300: hsl(210deg, 10%, 40%);
+  --color-gray-400: hsl(210deg, 9%, 45%);
+  --color-gray-500: hsl(210deg, 8%, 50%);
+  --color-gray-600: hsl(210deg, 12%, 55%);
+  --color-gray-700: hsl(210deg, 14%, 66%);
+  --color-gray-900: hsl(210deg, 25%, 88%);
+  --color-gray-1000: hsl(210deg, 25%, 96%);
+
+  /* Highlights */
+  --color-hightlight-secondary: hsl(343, 100%, 53%);
+  --color-hightlight-primary: hsl(13, 60%, 47%);
+  --color-hightlight-tertiary: hsl(40deg, 100%, 51%);
+
+  /* Error */
+  --color-error: hsl(357deg, 75%, 45%);
+
+  /* Success */
+  --color-success: hsl(124deg, 38%, 30%);
+
+  /* Notification */
+  --color-notification: hsl(201deg, 95%, 44%);
+
+  /* Warning */
+  --color-warning: hsl(40deg, 100%, 51%);
 }
 
 /* Set core body defaults */
 body {
   font-family: "Soehne", sans-serif;
   font-feature-settings: "ss01";
-  font-weight: 400;
-  color: black;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text);
+  background-color: var(--color-background);
 }
