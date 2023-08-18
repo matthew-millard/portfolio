@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-site",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "This repository contains the source code for my personal website.",
   "main": "server/server.js",
@@ -22,15 +22,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/matthew-millard/portfolio-site.git"
+    "url": "git+https://github.com/matthew-millard/portfolio.git"
   },
   "keywords": [],
   "author": "Matthew Millard",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/matthew-millard/portfolio-site/issues"
+    "url": "https://github.com/matthew-millard/portfolio/issues"
   },
-  "homepage": "https://github.com/matthew-millard/portfolio-site#readme",
+  "homepage": "https://github.com/matthew-millard/portfolio#readme",
   "devDependencies": {
     "concurrently": "^8.2.0",
     "eslint": "^8.47.0",
