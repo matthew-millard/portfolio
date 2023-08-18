@@ -26,9 +26,19 @@
   "rules": {
     "prettier/prettier": ["warn", {}, { "usePrettierrc": true }], // Use .prettierrc file as source
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], // To allow importing .jsx files
-    "no-console": 1,
+    "no-console": 0,
     "no-underscore-dangle": "off",
     "no-param-reassign": ["error", { "props": false }],
+    "import/no-extraneous-dependencies": [
+      "error",
+      { "devDependencies": true, "optionalDependencies": false, "peerDependencies": false }
+    ],
+    "import/no-relative-packages": 0,
+    "import/prefer-default-export": [
+      2,
+      { "target": "single" } // default is "single"
+    ],
+    "import/extensions": "off",
     "no-unused-vars": 1,
     "import/no-unresolved": 2,
     "no-undefined": 2,
