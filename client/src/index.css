@@ -17,8 +17,30 @@
 
 /* Colors and initialize font size */
 :root {
-  /* Fonts */
-  font-size: 62.5%;
+  /* Fonts sizes */
+  font-size: 62.5%; /* 1rem = 10px */
+  --font-size-base: 1.6rem;
+
+  /* ---- Mobile ---- */
+
+  /* Headings */
+  --font-size-h1: 3.2rem;
+  --font-size-h2: 2.8rem;
+  --font-size-h3: 2.4rem;
+  --font-size-h4: 2rem;
+
+  /* Paragraph */
+  --font-size-p: 1.6rem;
+
+  /* Smaller elements */
+  --font-size-span: 1.4rem;
+  --font-size-label: 1.4rem;
+  --font-size-input: 1rem;
+
+  /* For fine print, footnotes, etc. */
+  --font-size-small: 1.2rem;
+
+  /* Font weights */
   --font-weight-regular: 400;
   --font-weight-medium: 600;
 
@@ -57,6 +79,28 @@
   --color-warning: hsl(40deg, 100%, 51%);
 }
 
+/* ---- Desktop ---- */
+@media screen and (min-width: 768px) {
+  :root {
+    /* Headings */
+    --font-size-h1: 4rem;
+    --font-size-h2: 3.4rem;
+    --font-size-h3: 2.8rem;
+    --font-size-h4: 2.4rem;
+
+    /* Paragraph */
+    --font-size-p: 1.8rem;
+
+    /* Smaller elements */
+    --font-size-span: 1.6rem;
+    --font-size-label: 1.6rem;
+    --font-size-input: 1.6rem;
+
+    /* For fine print, footnotes, etc. */
+    --font-size-small: 1.4rem;
+  }
+}
+
 /* Set core body defaults */
 body {
   font-family: "Soehne", sans-serif;
@@ -64,4 +108,38 @@ body {
   font-weight: var(--font-weight-regular);
   color: var(--color-text);
   background-color: var(--color-background);
+}
+
+/* ---- Mobile ---- */
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+p {
+  font-size: var(--font-size-p);
+}
+
+span,
+label {
+  font-size: var(--font-size-span);
+}
+
+input {
+  font-size: var(--font-size-input);
+}
+
+small {
+  font-size: var(--font-size-small);
 }
