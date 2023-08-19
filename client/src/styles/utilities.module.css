@@ -1,5 +1,5 @@
 /* Flex Center */
-.flex-center-column {
+.flexCenterColumn {
   display: flex;
   justify-content: center;
   align-items: center;

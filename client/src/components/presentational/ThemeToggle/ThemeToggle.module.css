@@ -1,4 +1,4 @@
-.toggle {
+.toggleButton {
   background: none;
   border: none;
   cursor: pointer;
@@ -7,4 +7,8 @@
   justify-content: center;
   color: var(--color-text);
   font-size: var(--font-size-toggle);
+}
+
+.toggle {
+  height: 100%;
 }
