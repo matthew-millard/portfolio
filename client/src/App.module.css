@@ -9,6 +9,10 @@
     "footer";
   background-color: var(--color-background);
   color: var(--color-text);
+  /* Transition effect for smoother theme changes */
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .header {

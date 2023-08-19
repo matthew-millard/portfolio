@@ -6,5 +6,5 @@
   align-items: center;
   justify-content: center;
   color: var(--color-text);
-  background-color: var(--color-background);
+  font-size: var(--font-size-toggle);
 }
