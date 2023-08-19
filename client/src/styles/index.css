@@ -4,7 +4,6 @@
 @import "variables.css";
 @import "typography.css";
 @import "responsive.css";
-@import "utilities.css";
 
 /* Set core body defaults */
 body {
@@ -38,22 +37,27 @@ h4 {
 
 p {
   font-size: var(--font-size-p);
+  letter-spacing: var(--letter-spacing-1);
 }
 
 span,
 label {
   font-size: var(--font-size-span);
+  letter-spacing: var(--letter-spacing-1);
 }
 
 input {
   font-size: var(--font-size-input);
+  letter-spacing: var(--letter-spacing-1);
 }
 
 small {
   font-size: var(--font-size-small);
+  letter-spacing: var(--letter-spacing-1);
 }
 
 /* Default button */
 button {
   font-size: var(--font-size-button);
+  letter-spacing: var(--letter-spacing-1);
 }
