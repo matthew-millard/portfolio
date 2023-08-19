@@ -1,10 +1,11 @@
 import React from "react";
-import { ThemeToggle } from "../../presentational";
+import { ThemeToggle, NavToggle } from "../../presentational";
 
-function Header({ theme, onToggleTheme }) {
+function Header({ theme, onToggleTheme, navOpen, onToggleNav }) {
   return (
     <header>
       <ThemeToggle currentTheme={theme} onToggle={onToggleTheme} />
+      <NavToggle navOpen={navOpen} onToggle={onToggleNav} />
     </header>
   );
 }

@@ -4,17 +4,28 @@ import { Header, Footer } from "./components/container";
 import styles from "./App.module.css";
 
 function App() {
-  const [theme, setTheme] = useState("dark"); // default theme is dark
+  const [theme, setTheme] = useState("dark"); // Theme state set to dark by default
+  const [navOpen, setNavOpen] = useState(false); // Nav state set to false by default
 
-  // toggleTheme function will be passed to the Header component
+  // Toggle between light and dark theme
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+  };
+
+  // Close or open the nav
+  const toggleNav = () => {
+    setNavOpen((prevNavOpen) => !prevNavOpen);
   };
 
   return (
     <div className={styles.appContainer} data-theme={theme}>
       <div className={styles.header}>
-        <Header theme={theme} onToggleTheme={toggleTheme} />
+        <Header
+          theme={theme}
+          onToggleTheme={toggleTheme}
+          onToggleNav={toggleNav}
+          navOpen={navOpen}
+        />
       </div>
       <div className={styles.main}>
         <Outlet />
