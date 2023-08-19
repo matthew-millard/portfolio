@@ -1,5 +1,6 @@
 /* Imports */
 @import "reset.css";
+@import "themes.css";
 @import "variables.css";
 @import "typography.css";
 @import "responsive.css";
@@ -50,4 +51,9 @@ input {
 
 small {
   font-size: var(--font-size-small);
+}
+
+/* Default button */
+button {
+  font-size: var(--font-size-button);
 }

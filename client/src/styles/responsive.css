@@ -10,6 +10,9 @@
     /* Paragraph */
     --font-size-p: 1.8rem;
 
+    /* Button */
+    --font-size-button: 2.4rem;
+
     /* Smaller elements */
     --font-size-span: 1.6rem;
     --font-size-label: 1.6rem;
