@@ -1,0 +1,53 @@
+/* Imports */
+@import "reset.css";
+@import "variables.css";
+@import "typography.css";
+@import "responsive.css";
+@import "utilities.css";
+
+/* Set core body defaults */
+body {
+  font-family: "Soehne", sans-serif;
+  font-feature-settings: "ss01";
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* ---- Mobile ---- */
+h1 {
+  font-size: var(--font-size-h1);
+  letter-spacing: var(--letter-spacing-1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  letter-spacing: var(--letter-spacing-1);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  letter-spacing: var(--letter-spacing-1);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  letter-spacing: var(--letter-spacing-1);
+}
+
+p {
+  font-size: var(--font-size-p);
+}
+
+span,
+label {
+  font-size: var(--font-size-span);
+}
+
+input {
+  font-size: var(--font-size-input);
+}
+
+small {
+  font-size: var(--font-size-small);
+}
