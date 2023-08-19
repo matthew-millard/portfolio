@@ -6,16 +6,20 @@ import styles from "./ThemeToggle.module.css";
 function ThemeToggle({ currentTheme, onToggle }) {
   return (
     <div>
-      <button className={styles.toggle} onClick={onToggle}>
+      <button
+        className={styles.toggle}
+        onClick={onToggle}
+        aria-label={`Switch to ${currentTheme === "dark" ? "Light" : "Dark"} Mode`}
+      >
         {currentTheme === "dark" ? (
           <div className="flex-center-column">
             <FontAwesomeIcon icon={faToggleLargeOn} />
-            <small>Light Mode</small>
+            <span>Light Mode</span>
           </div>
         ) : (
           <div className="flex-center-column">
             <FontAwesomeIcon icon={faToggleLargeOff} />
-            <small>Dark Mode</small>
+            <span>Dark Mode</span>
           </div>
         )}
       </button>
