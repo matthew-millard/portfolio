@@ -4,9 +4,10 @@
   box-sizing: border-box;
 }
 
-/* Remove all margins */
+/* Remove all margins and padding */
 * {
   margin: 0;
+  padding: 0;
 }
 
 /* Set core root defaults */

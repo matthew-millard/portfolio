@@ -61,3 +61,17 @@ button {
   font-size: var(--font-size-button);
   letter-spacing: var(--letter-spacing-1);
 }
+
+/* Default a */
+a {
+  font-size: var(--font-size-a);
+  letter-spacing: var(--letter-spacing-1);
+  color: var(--color-text);
+}
+
+li {
+  font-size: var(--font-size-p);
+  letter-spacing: var(--letter-spacing-1);
+  color: var(--color-text);
+  list-style: none;
+}

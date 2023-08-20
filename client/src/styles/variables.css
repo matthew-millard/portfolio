@@ -18,6 +18,9 @@
   /* Button */
   --font-size-button: 2rem;
 
+  /* Link */
+  --font-size-a: 2rem;
+
   /* Toggle */
   --font-size-toggle: 2.4rem;
 
@@ -65,4 +68,8 @@
 
   /* Warning */
   --color-warning: hsl(40deg, 100%, 51%);
+
+  /* Box shadows */
+  --box-shadow-nav: 0 0 10px hsla(0, 0%, 0%, 0.1);
+  --box-shadow-off-canvas: 3px 3px 15px 3px rgba(0, 0, 0, 0.3);
 }

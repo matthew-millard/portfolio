@@ -4,10 +4,12 @@
   --color-text-muted: hsl(200, 18%, 51%);
   --color-background: hsl(210deg, 30%, 8%);
   --color-background-secondary: hsl(210deg, 30%, 12%);
+  --color-button-bg: hsl(210deg, 15%, 20%);
 }
 
 /* Light theme */
 [data-theme="light"] {
   --color-text: hsl(210deg, 30%, 8%);
   --color-background: hsl(0deg, 0%, 100%);
+  --color-button-bg: hsl(210deg, 25%, 96%);
 }
