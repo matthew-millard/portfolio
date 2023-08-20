@@ -1,4 +1,4 @@
 import { NavToggle, OffCanvasNav, ThemeToggle } from "./presentational";
-import { Header, Footer } from "./container";
+import { Header, Footer, DesktopNav } from "./container";
 
-export { NavToggle, OffCanvasNav, ThemeToggle, Header, Footer };
+export { NavToggle, OffCanvasNav, ThemeToggle, Header, Footer, DesktopNav };
