@@ -1,0 +1,51 @@
+/* OffCanvasNav.module.css */
+.offCanvasContainer {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  background-color: var(--color-background);
+  transition: left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  overflow-y: auto;
+  z-index: 2000; /* Above overlay */
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+
+  /* Layout */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px auto 80px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+.open {
+  left: 0;
+  box-shadow: var(--box-shadow-off-canvas);
+}
+
+.navList {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 8px 16px;
+}
+
+.navLink {
+  color: var(--color-text);
+  text-decoration: none;
+  display: block;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navLink:hover,
+.navLink:focus {
+  background-color: var(--color-button-bg);
+}

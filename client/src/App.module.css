@@ -26,3 +26,19 @@
 .footer {
   grid-area: footer;
 }
+
+/* Overlay when off-canvas navbar is open */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* semi-transparent black */
+  z-index: 1000; /* to ensure it's above other content but below the off-canvas nav */
+}
+
+.overlayVisible {
+  display: block;
+}

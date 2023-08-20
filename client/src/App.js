@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
-import { Header, Footer } from "./components/container";
+import { Header, Footer, OffCanvasNav } from "./components";
 import styles from "./App.module.css";
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
 
   return (
     <div className={styles.appContainer} data-theme={theme}>
+      <OffCanvasNav isOpen={navOpen} />
       <div className={styles.header}>
         <Header
           theme={theme}
@@ -33,6 +34,11 @@ function App() {
       <div className={styles.footer}>
         <Footer />
       </div>
+      {/* Overlay When Nav off-canvas navbar is open */}
+      <div
+        className={`${styles.overlay} ${navOpen ? styles.overlayVisible : ""}`}
+        onClick={toggleNav}
+      ></div>
     </div>
   );
 }
