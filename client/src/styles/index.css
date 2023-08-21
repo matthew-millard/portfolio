@@ -67,6 +67,7 @@ a {
   font-size: var(--font-size-a);
   letter-spacing: var(--letter-spacing-1);
   color: var(--color-text);
+  text-decoration: none;
 }
 
 li {

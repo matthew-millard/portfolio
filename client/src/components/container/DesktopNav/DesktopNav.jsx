@@ -1,9 +1,10 @@
 import React from "react";
+import { Logo } from "../../../components";
 
 function DesktopNav() {
   return (
     <div>
-      <h1>DesktopNav</h1>
+      <Logo />
     </div>
   );
 }

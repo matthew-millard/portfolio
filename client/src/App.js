@@ -1,32 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
+import { AppProvider, useAppContext } from "./contexts/App.Context";
 import { Outlet } from "react-router-dom";
 import { Header, Footer, OffCanvasNav } from "./components";
 import styles from "./App.module.css";
 
 function App() {
-  const [theme, setTheme] = useState("dark"); // Theme state set to dark by default
-  const [navOpen, setNavOpen] = useState(false); // Nav state set to false by default
+  return (
+    <AppProvider>
+      <AppContent />
+    </AppProvider>
+  );
+}
 
-  // Toggle between light and dark theme
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
-  };
-
-  // Close or open the nav
-  const toggleNav = () => {
-    setNavOpen((prevNavOpen) => !prevNavOpen);
-  };
+function AppContent() {
+  const { theme, navOpen, toggleNav } = useAppContext();
 
   return (
     <div className={styles.appContainer} data-theme={theme}>
       <OffCanvasNav isOpen={navOpen} />
       <div className={styles.header}>
-        <Header
-          theme={theme}
-          onToggleTheme={toggleTheme}
-          onToggleNav={toggleNav}
-          navOpen={navOpen}
-        />
+        <Header />
       </div>
       <div className={styles.main}>
         <Outlet />
