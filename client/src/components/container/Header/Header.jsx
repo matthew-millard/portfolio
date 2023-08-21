@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { ThemeToggle, NavToggle, DesktopNav } from "../../../components";
+import { DesktopNav, MobileNav } from "../../../components";
 import styles from "./Header.module.css";
 
-function Header({ theme, onToggleTheme, navOpen, onToggleNav }) {
+function Header() {
   // State to track mobile view based on screen width
   const [isMobile, setIsMobile] = useState(window.matchMedia("(max-width: 1200px)").matches);
 
@@ -22,16 +22,7 @@ function Header({ theme, onToggleTheme, navOpen, onToggleNav }) {
   }, []);
 
   return (
-    <header className={styles.headerContainer}>
-      {isMobile ? (
-        <>
-          <ThemeToggle currentTheme={theme} onToggle={onToggleTheme} />
-          <NavToggle navOpen={navOpen} onToggle={onToggleNav} />
-        </>
-      ) : (
-        <DesktopNav />
-      )}
-    </header>
+    <header className={styles.headerContainer}>{isMobile ? <MobileNav /> : <DesktopNav />}</header>
   );
 }
 

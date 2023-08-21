@@ -6,6 +6,9 @@
 
   /* ---- Mobile ---- */
 
+  /* Logo */
+  --font-size-logo: 2.4rem;
+
   /* Headings */
   --font-size-h1: 3.2rem;
   --font-size-h2: 2.8rem;

@@ -7,6 +7,10 @@
   justify-content: center;
   color: var(--color-text);
   font-size: var(--font-size-toggle);
+  height: 4rem;
+  width: 4rem;
+  /* border: 2px solid var(--color-button-bg);
+  border-radius: 50%; */
 }
 
 .toggle {
