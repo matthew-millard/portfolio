@@ -5,6 +5,7 @@
   --color-background: hsl(210deg, 30%, 8%);
   --color-background-secondary: hsl(210deg, 30%, 12%);
   --color-button-bg: hsl(210deg, 15%, 20%);
+  --color-border: hsl(210deg, 10%, 40%);
 }
 
 /* Light theme */
@@ -12,4 +13,5 @@
   --color-text: hsl(210deg, 30%, 8%);
   --color-background: hsl(0deg, 0%, 100%);
   --color-button-bg: hsl(210deg, 25%, 96%);
+  --color-border: hsl(210deg, 25%, 88%);
 }

@@ -9,8 +9,9 @@
   font-size: var(--font-size-toggle);
   height: 4rem;
   width: 4rem;
-  /* border: 2px solid var(--color-button-bg);
-  border-radius: 50%; */
+  padding: 8px;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
 }
 
 .toggle {
