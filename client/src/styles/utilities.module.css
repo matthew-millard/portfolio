@@ -5,3 +5,15 @@
   align-items: center;
   flex-direction: column;
 }
+
+.error,
+.errorHidden {
+  color: var(--color-error);
+  font-size: var(--font-size-error);
+  position: absolute;
+  bottom: -6px;
+}
+
+.errorHidden {
+  visibility: hidden;
+}
