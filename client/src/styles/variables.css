@@ -29,8 +29,8 @@
 
   /* Smaller elements */
   --font-size-span: 1.4rem;
-  --font-size-label: 1.4rem;
-  --font-size-input: 1rem;
+  --font-size-input: 1.8rem;
+  --font-size-label: 1.8rem;
 
   /* For fine print, footnotes, etc. */
   --font-size-small: 1.2rem;
@@ -40,6 +40,7 @@
   --font-weight-medium: 600;
 
   /* Letter spacing */
+  --letter-spacing-0: 0.05rem;
   --letter-spacing-1: 0.1rem;
   --letter-spacing-2: 0.2rem;
   --letter-spacing-3: 0.3rem;
@@ -62,6 +63,7 @@
 
   /* Error */
   --color-error: hsl(357deg, 75%, 45%);
+  --font-size-error: 1.4rem;
 
   /* Success */
   --color-success: hsl(124deg, 38%, 30%);
