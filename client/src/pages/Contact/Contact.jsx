@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SubmitButton } from "../../components";
 import isValidEmail from "../../utils/isValidEmail";
 import styles from "./Contact.module.css";
 import utilStyles from "../../styles/utilities.module.css";
@@ -84,7 +85,7 @@ function Contact() {
       </p>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formFieldContainer}>
-          <div className={styles.inputGroup}>
+          <div className={`${styles.inputGroup} ${styles.firstNameInput}`}>
             <label htmlFor="firstName">First name</label>
             <input
               type="text"
@@ -98,7 +99,7 @@ function Contact() {
               {firstNameError}
             </p>
           </div>
-          <div className={styles.inputGroup}>
+          <div className={`${styles.inputGroup} ${styles.lastNameInput}`}>
             <label htmlFor="lastName">Last name</label>
             <input
               type="text"
@@ -112,7 +113,7 @@ function Contact() {
               {lastNameError}
             </p>
           </div>
-          <div className={styles.inputGroup}>
+          <div className={`${styles.inputGroup} ${styles.emailInput}`}>
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -126,7 +127,7 @@ function Contact() {
               {emailAddressError}
             </p>
           </div>
-          <div className={styles.inputGroup}>
+          <div className={`${styles.inputGroup} ${styles.messageInput}`}>
             <label htmlFor="message">Message</label>
             <textarea
               id="message"
@@ -142,8 +143,8 @@ function Contact() {
           </div>
         </div>
         {/* TODO: Create Button component */}
-        <div>
-          <button type="submit">Send</button>
+        <div className={styles.submitButtonContainer}>
+          <SubmitButton text="Send" handleSubmit={handleSubmit} />
         </div>
       </form>
     </div>

@@ -71,6 +71,12 @@
   /* Notification */
   --color-notification: hsl(201deg, 95%, 44%);
 
+  /* Button */
+  --color-button: hsl(201deg, 95%, 44%);
+  --color-button-hover: hsl(201deg, 95%, 30%);
+  --color-button-active: hsl(201, 95%, 55%);
+  --color-button-shadow: hsl(201deg, 95%, 30%);
+
   /* Warning */
   --color-warning: hsl(40deg, 100%, 51%);
 

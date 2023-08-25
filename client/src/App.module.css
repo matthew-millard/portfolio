@@ -21,6 +21,8 @@
 
 .main {
   grid-area: main;
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
@@ -41,4 +43,7 @@
 
 .overlayVisible {
   display: block;
+}
+
+@media (min-width: 768px) {
 }

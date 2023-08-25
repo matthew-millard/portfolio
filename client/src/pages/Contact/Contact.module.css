@@ -1,11 +1,11 @@
 .contactContainer {
-  background-color: var(--color-background);
   min-height: calc(100vh - 80px);
+  max-width: 900px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr;
   justify-items: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .heading {
@@ -24,7 +24,6 @@
 .formFieldContainer {
   /* background-color: aqua; */
   width: 100%;
-  margin-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto);
@@ -38,4 +37,43 @@
   width: 100%;
   padding: 16px;
   gap: 5px;
+}
+
+.submitButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  .formFieldContainer {
+    /* background-color: aqua; */
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "firstName lastName"
+      "email ."
+      "message message";
+    justify-items: flex-start;
+  }
+
+  .firstNameInput {
+    grid-area: firstName;
+  }
+
+  .lastNameInput {
+    grid-area: lastName;
+  }
+
+  .emailInput {
+    grid-area: email;
+  }
+
+  .messageInput {
+    grid-area: message;
+  }
 }
