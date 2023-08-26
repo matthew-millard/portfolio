@@ -1,0 +1,63 @@
+.toastContainer {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 16px;
+  color: var(--color-text-toast);
+  border-radius: 6px;
+  box-shadow: var(--box-shadow-toast);
+  z-index: 1000;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: slideIn 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+.toastContainer p {
+  font-size: var(--font-size-p);
+}
+
+.toastContainer.success {
+  background-color: var(--color-success);
+}
+
+.toastContainer.error {
+  background-color: var(--color-error);
+}
+
+.toastContainer.warning {
+  background-color: var(--color-warning);
+}
+
+.toastContainer.fadeOut {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

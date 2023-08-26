@@ -1,5 +1,6 @@
 import React from "react";
-import { AppProvider, useAppContext } from "./contexts/App.Context";
+import { AppProvider, useAppContext } from "./hooks/AppContext";
+import { ToastProvider } from "./hooks/ToastContext";
 import { Outlet } from "react-router-dom";
 import { Header, Footer, OffCanvasNav } from "./components";
 import styles from "./App.module.css";
@@ -7,7 +8,9 @@ import styles from "./App.module.css";
 function App() {
   return (
     <AppProvider>
-      <AppContent />
+      <ToastProvider>
+        <AppContent />
+      </ToastProvider>
     </AppProvider>
   );
 }
