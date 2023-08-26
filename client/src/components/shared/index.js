@@ -1,3 +1,4 @@
 import Logo from "./Logo";
+import SubmitButton from "./SubmitButton";
 
-export { Logo };
+export { Logo, SubmitButton };
