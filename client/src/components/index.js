@@ -1,6 +1,6 @@
 import { NavToggle, OffCanvasNav, ThemeToggle } from "./presentational";
 import { Header, Footer, DesktopNav, MobileNav } from "./container";
-import { Logo, SubmitButton } from "./shared";
+import { Logo, SubmitButton, LoadingOverlay, ToastNotification } from "./shared";
 
 export {
   NavToggle,
@@ -12,4 +12,6 @@ export {
   MobileNav,
   Logo,
   SubmitButton,
+  LoadingOverlay,
+  ToastNotification,
 };

@@ -10,12 +10,22 @@ const typeDefs = gql`
     date: String
   }
 
+  type sendEmailResponse {
+    success: Boolean
+    message: String
+  }
+
   type Query {
     getContacts: [Contact]
   }
 
   type Mutation {
-    addContact(firstName: String!, lastName: String!, email: String!, message: String!): Contact
+    sendEmail(
+      firstName: String!
+      lastName: String!
+      emailAddress: String!
+      message: String!
+    ): sendEmailResponse!
   }
 `;
 

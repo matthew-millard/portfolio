@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { SubmitButton } from "../../components";
+import { useMutation } from "@apollo/client";
+import { SEND_EMAIL } from "../../graphql/mutations";
+import { SubmitButton, LoadingOverlay } from "../../components";
+import { useToast } from "../../hooks/ToastContext";
 import isValidEmail from "../../utils/isValidEmail";
 import styles from "./Contact.module.css";
 import utilStyles from "../../styles/utilities.module.css";
@@ -13,10 +16,30 @@ function Contact() {
   const [lastNameError, setLastNameError] = useState("");
   const [emailAddressError, setEmailAddressError] = useState("");
   const [messageError, setMessageError] = useState("");
+  const [sendEmail, { loading, error }] = useMutation(SEND_EMAIL);
+  const { setToast } = useToast();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted");
+
+    // TODO: Send formData to backend
+    const response = await sendEmail({ variables: { firstName, lastName, emailAddress, message } });
+
+    if (!response.data.sendEmail.success) {
+      setToast({ message: response.data.sendEmail.message, type: "error", duration: 5000 }); // failed to send email
+    } else {
+      setToast({ message: response.data.sendEmail.message, type: "success", duration: 5000 }); // successfully sent email
+    }
+
+    // Form Reset
+    setFirstName("");
+    setLastName("");
+    setEmailAddress("");
+    setMessage("");
+    setFirstNameError("");
+    setLastNameError("");
+    setEmailAddressError("");
+    setMessageError("");
   };
 
   const handleChange = ({ target: { id, value } }) => {
@@ -78,6 +101,7 @@ function Contact() {
 
   return (
     <div className={styles.contactContainer}>
+      {loading && <LoadingOverlay />}
       <h1 className={styles.heading}>Contact</h1>
       <p className={styles.subHeading}>
         I'm always eager to discuss web projects or chat about tech! Don't hesitate to reach out via
@@ -93,6 +117,7 @@ function Contact() {
               value={firstName}
               onChange={handleChange}
               onBlur={handleBlur}
+              disabled={loading}
               required
             />
             <p className={firstNameError ? utilStyles.error : utilStyles.errorHidden}>
@@ -107,6 +132,7 @@ function Contact() {
               value={lastName}
               onChange={handleChange}
               onBlur={handleBlur}
+              disabled={loading}
               required
             />
             <p className={lastNameError ? utilStyles.error : utilStyles.errorHidden}>
@@ -121,6 +147,7 @@ function Contact() {
               value={emailAddress}
               onChange={handleChange}
               onBlur={handleBlur}
+              disabled={loading}
               required
             />
             <p className={emailAddressError ? utilStyles.error : utilStyles.errorHidden}>
@@ -135,6 +162,7 @@ function Contact() {
               value={message}
               onChange={handleChange}
               onBlur={handleBlur}
+              disabled={loading}
               required
             />
             <p className={messageError ? utilStyles.error : utilStyles.errorHidden}>
@@ -142,9 +170,14 @@ function Contact() {
             </p>
           </div>
         </div>
-        {/* TODO: Create Button component */}
+        <p className={utilStyles.error}>{error ? error.message : ""}</p>
+
         <div className={styles.submitButtonContainer}>
-          <SubmitButton text="Send" handleSubmit={handleSubmit} />
+          <SubmitButton
+            text={loading ? "Sending" : "Send"}
+            handleSubmit={handleSubmit}
+            disabled={loading}
+          />
         </div>
       </form>
     </div>

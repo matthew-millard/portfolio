@@ -1,32 +1,26 @@
+/* eslint-disable import/extensions */
 import { Contact } from "../models/index.js";
 
 const resolvers = {
-  Query: {
-    getContacts: async () => {
-      try {
-        const contacts = await Contact.find({});
-        return contacts;
-      } catch (err) {
-        console.error(`Failed to get contacts: ${err.message}`);
-        throw new Error(`There was an issue retrieving the contacts: ${err.message}`);
-      }
-    },
-  },
+  Query: {},
   Mutation: {
-    addContact: async (_, { firstName, lastName, email, message }) => {
+    sendEmail: async (_, { firstName, lastName, emailAddress, message }) => {
       try {
-        const contact = await Contact.create({
+        await Contact.create({
           firstName,
           lastName,
-          email,
+          emailAddress,
           message,
         });
-        return contact;
+        return {
+          success: true,
+          message: "Your message has been sent!",
+        };
       } catch (err) {
-        console.error(`Failed to create contact: ${err.message}`);
-        throw new Error(
-          "There was an issue submitting your contact information. Please try again later.",
-        );
+        return {
+          success: false,
+          message: "Your message could not be sent!",
+        };
       }
     },
   },

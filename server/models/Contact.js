@@ -13,7 +13,7 @@ const contactSchema = new Schema({
     required: true,
     trim: true,
   },
-  email: {
+  emailAddress: {
     type: String,
     validate: {
       validator: isValidEmail,
