@@ -100,7 +100,7 @@ function Contact() {
   };
 
   return (
-    <div className={styles.contactContainer}>
+    <div className={`${styles.contactContainer} ${utilStyles.minHeight}`}>
       {loading && <LoadingOverlay />}
       <h1 className={styles.heading}>Contact</h1>
       <p className={styles.subHeading}>

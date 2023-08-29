@@ -1,12 +1,13 @@
 import React from "react";
+// import styles from "./Projects.module.css";
 import utilStyles from "../../styles/utilities.module.css";
 
-function NotFound() {
+function Projects() {
   return (
     <div className={utilStyles.minHeight}>
-      <h1>404 Not Found</h1>
+      <h1>Projects</h1>
     </div>
   );
 }
 
-export default NotFound;
+export default Projects;
