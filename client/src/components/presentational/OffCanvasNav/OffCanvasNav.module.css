@@ -35,25 +35,6 @@
   padding: 0 32px;
 }
 
-.navList {
+.navLinksContainer {
   grid-area: main;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 0 8px 16px;
-}
-
-.navLink {
-  color: var(--color-text);
-  text-decoration: none;
-  display: block;
-  padding: 8px 16px;
-  border-radius: 6px;
-  background-color: transparent;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.navLink:hover,
-.navLink:focus {
-  background-color: var(--color-button-bg);
 }

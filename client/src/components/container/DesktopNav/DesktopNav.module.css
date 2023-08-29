@@ -1,6 +1,28 @@
 .navContainer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo . nav theme social";
   align-items: center;
   width: 100%;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.theme {
+  grid-area: theme;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social {
+  grid-area: social;
+  display: flex;
+  justify-content: flex-end;
 }

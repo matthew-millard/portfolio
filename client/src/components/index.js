@@ -1,5 +1,5 @@
 import { Header, Footer, DesktopNav, MobileNav } from "./container";
-import { NavToggle, OffCanvasNav, ThemeToggle, SocialIcons } from "./presentational";
+import { NavToggle, OffCanvasNav, ThemeToggle, SocialIcons, NavLinks } from "./presentational";
 import { Logo, SubmitButton, LoadingOverlay, ToastNotification } from "./shared";
 
 export {
@@ -15,4 +15,5 @@ export {
   LoadingOverlay,
   ToastNotification,
   SocialIcons,
+  NavLinks,
 };
