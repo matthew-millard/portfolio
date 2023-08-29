@@ -6,6 +6,11 @@
   flex-direction: column;
 }
 
+/* min-heigt */
+.minHeight {
+  min-height: calc(100vh - 80px);
+}
+
 .error,
 .errorHidden {
   color: var(--color-error);

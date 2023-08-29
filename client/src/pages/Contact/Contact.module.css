@@ -1,5 +1,4 @@
 .contactContainer {
-  min-height: calc(100vh - 80px);
   max-width: 900px;
   display: grid;
   grid-template-columns: 1fr;
