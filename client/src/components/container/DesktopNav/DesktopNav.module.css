@@ -1,6 +1,6 @@
 .navContainer {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-template-areas: "logo . nav theme social";
   align-items: center;

@@ -11,6 +11,10 @@
   min-height: calc(100vh - 80px);
 }
 
+.socialIcons {
+  font-size: 2rem;
+}
+
 .error,
 .errorHidden {
   color: var(--color-error);
@@ -21,4 +25,10 @@
 
 .errorHidden {
   visibility: hidden;
+}
+
+@media (min-width: 768px) {
+  .socialIcons {
+    font-size: 2.4rem;
+  }
 }

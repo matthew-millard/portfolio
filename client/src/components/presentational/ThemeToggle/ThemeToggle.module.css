@@ -7,10 +7,6 @@
   justify-content: center;
   color: var(--color-text);
   font-size: var(--font-size-toggle);
-  height: 4rem;
-  width: 4rem;
-  padding: 8px;
-  border: 2px solid var(--color-border);
   border-radius: 50%;
 }
 

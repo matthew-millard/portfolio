@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./SocialIcons.module.css";
+import utilsStyles from "../../../styles/utilities.module.css";
 import { socialIcons } from "./socialIcons";
 
 function SocialIcons() {
@@ -9,7 +10,13 @@ function SocialIcons() {
       <ul aria-label="Social media links" className={styles.iconList}>
         {socialIcons.map(({ id, url, brand }) => (
           <li key={id}>
-            <a href={url} target="_blank" rel="noopener noreferrer" aria-label={brand}>
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={brand}
+              className={utilsStyles.socialIcons}
+            >
               <FontAwesomeIcon icon={brand} />
             </a>
           </li>

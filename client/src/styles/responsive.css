@@ -7,6 +7,9 @@
     --font-size-h3: 2.8rem;
     --font-size-h4: 2.4rem;
 
+    /* Logo */
+    --font-size-logo: 2.4rem;
+
     /* Paragraph */
     --font-size-p: 1.8rem;
 
@@ -17,7 +20,7 @@
     --font-size-a: 2rem;
 
     /* Toggle */
-    --font-size-toggle: 2.8rem;
+    --font-size-toggle: 2.4rem;
 
     /* Smaller elements */
     --font-size-span: 1.6rem;
@@ -26,5 +29,19 @@
 
     /* For fine print, footnotes, etc. */
     --font-size-small: 1.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    /* Logo */
+    --font-size-logo: 2.8rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    /* Logo */
+    --font-size-logo: 3.4rem;
   }
 }

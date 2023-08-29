@@ -85,7 +85,8 @@ button {
 /* Default a */
 a {
   font-size: var(--font-size-a);
-  /* letter-spacing: var(--letter-spacing-1); */
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-1);
   color: var(--color-text);
   text-decoration: none;
 }
