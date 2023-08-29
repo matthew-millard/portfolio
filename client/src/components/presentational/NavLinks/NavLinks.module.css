@@ -1,0 +1,26 @@
+.desktopNav {
+  width: auto;
+  height: 100%;
+}
+
+.desktopNavList {
+  /* background-color: blueviolet; */
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileNav {
+  padding: 16px 8px;
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mobileNavListItem {
+  padding: 8px 16px;
+}
