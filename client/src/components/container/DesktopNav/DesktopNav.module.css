@@ -5,6 +5,8 @@
   grid-template-areas: "logo . nav theme social";
   align-items: center;
   width: 100%;
+  max-width: 1550px;
+  margin: 0 auto;
 }
 
 .logo {
