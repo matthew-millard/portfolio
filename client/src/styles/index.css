@@ -97,3 +97,10 @@ li {
   color: var(--color-text);
   list-style: none;
 }
+
+hr {
+  border: 1px solid var(--color-page-divider);
+  width: 90%;
+  max-width: 1550px;
+  margin: 0 auto;
+}

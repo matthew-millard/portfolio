@@ -1,5 +1,12 @@
 import { Header, Footer, DesktopNav, MobileNav } from "./container";
-import { NavToggle, OffCanvasNav, ThemeToggle, SocialIcons, NavLinks } from "./presentational";
+import {
+  NavToggle,
+  OffCanvasNav,
+  ThemeToggle,
+  SocialIcons,
+  NavLinks,
+  Copyright,
+} from "./presentational";
 import { Logo, SubmitButton, LoadingOverlay, ToastNotification } from "./shared";
 
 export {
@@ -16,4 +23,5 @@ export {
   ToastNotification,
   SocialIcons,
   NavLinks,
+  Copyright,
 };

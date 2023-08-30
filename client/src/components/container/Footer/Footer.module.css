@@ -1,3 +1,22 @@
 .footerContainer {
-  background-color: var(--color-background);
+  /* background-color: aqua; */
+}
+
+.footerList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.footerList li a {
+  font-size: var(--font-size-small);
+  color: var(--color-gray-500);
+}
+
+.footerSocialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
