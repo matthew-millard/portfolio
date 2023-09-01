@@ -4,8 +4,7 @@
   grid-template-rows: 1fr;
   grid-template-areas: "logo . nav theme social";
   align-items: center;
-  width: 100%;
-  max-width: 1550px;
+  width: 90%;
   margin: 0 auto;
 }
 

@@ -19,10 +19,13 @@ function Home() {
       </div>
       <div className={styles.intro}>
         <h3>
-          Hello, I'm Matt. Welcome to my home on the internet. I have a huge affinity for all things
-          tech related. I specialize in developing websites where user interaction is paramount and
-          my expertise lies in React, GraphQL, and MongoDB.
+          Hello, I'm Matt. Welcome to my digital corner. I'm deeply passionate about tech,
+          especially the magic of building ideas from scratch.
+          <br />
+          I've trained in developing web applications with a focus on user-centric design, primarily
+          using React, GraphQL, and MongoDB.
         </h3>
+        <CTAButton text="Projects" link="/projects" />
       </div>
     </div>
   );

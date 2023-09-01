@@ -28,6 +28,7 @@ function AppContent() {
         <Outlet />
       </div>
       <div className={styles.footer}>
+        <hr />
         <Footer />
       </div>
       {/* Overlay When Nav off-canvas navbar is open */}

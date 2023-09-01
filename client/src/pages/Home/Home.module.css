@@ -8,6 +8,8 @@
     "buttons"
     "intro";
   margin-bottom: 2rem;
+  width: 100%;
+  gap: 2rem;
 }
 
 .headshot {
@@ -30,6 +32,7 @@
   grid-area: buttons;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 2rem;
   padding: 2rem;
 }
@@ -37,4 +40,38 @@
 .intro {
   grid-area: intro;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  background-color: var(--color-gray-100);
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* Media Queries */
+@media (min-width: 576px) {
+  .homeContainer {
+    width: 90%;
+  }
+
+  .intro {
+    width: 100%;
+    padding: 4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .homeContainer {
+    display: grid;
+    grid-template-columns: auto 4fr 2fr auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      ". mission headshot ."
+      ". buttons headshot ."
+      ". intro intro .";
+    margin-bottom: 2rem;
+  }
 }
