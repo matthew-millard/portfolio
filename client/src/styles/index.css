@@ -100,7 +100,6 @@ li {
 
 hr {
   border: 1px solid var(--color-page-divider);
-  width: 90%;
-  max-width: 1550px;
+  width: var(--hr-width);
   margin: 0 auto;
 }

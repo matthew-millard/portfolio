@@ -29,6 +29,9 @@
 
     /* For fine print, footnotes, etc. */
     --font-size-small: 1.4rem;
+
+    /* Horizontal Rule */
+    --hr-width: calc(90% - 4rem);
   }
 }
 
