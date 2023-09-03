@@ -15,8 +15,16 @@ const typeDefs = gql`
     message: String
   }
 
+  type Post {
+    _id: ID
+    title: String
+    slug: String
+    content: String
+    tags: [String]
+  }
+
   type Query {
-    getContacts: [Contact]
+    getBlogPosts: [Post]
   }
 
   type Mutation {
