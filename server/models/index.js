@@ -1,5 +1,5 @@
-// eslint-disable-next-line import/extensions
+/* eslint-disable import/extensions */
 import Contact from "./Contact.js";
+import Post from "./Post.js";
 
-// eslint-disable-next-line import/prefer-default-export
-export { Contact };
+export { Contact, Post };

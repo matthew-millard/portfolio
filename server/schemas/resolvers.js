@@ -1,8 +1,17 @@
 /* eslint-disable import/extensions */
-import { Contact } from "../models/index.js";
+import { Contact, Post } from "../models/index.js";
 
 const resolvers = {
-  Query: {},
+  Query: {
+    getBlogPosts: async () => {
+      try {
+        const posts = await Post.find({});
+        return posts;
+      } catch (err) {
+        throw new Error(err);
+      }
+    },
+  },
   Mutation: {
     sendEmail: async (_, { firstName, lastName, emailAddress, message }) => {
       try {
