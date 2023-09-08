@@ -103,3 +103,11 @@ hr {
   width: var(--hr-width);
   margin: 0 auto;
 }
+
+/* Active Navigation Link */
+.active {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--color-button-active);
+}

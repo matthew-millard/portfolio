@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import links from "./links";
 import styles from "./NavLinks.module.css";
 
@@ -12,7 +12,7 @@ function NavLinks({ navType }) {
       <ul className={listClass}>
         {links.map((link) => (
           <li key={link.id} className={listItemClass}>
-            <Link to={link.path}>{link.title}</Link>
+            <NavLink to={link.path}>{link.title}</NavLink>
           </li>
         ))}
       </ul>

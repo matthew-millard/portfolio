@@ -18,3 +18,15 @@ export const SEND_EMAIL = gql`
     }
   }
 `;
+
+export const UPDATE_FEEDBACK_COUNT = gql`
+  mutation UpdateFeedbackCount($postId: ID!, $value: String!) {
+    updateFeedbackCount(postId: $postId, value: $value) {
+      _id
+      helpfulCount
+      unhelpfulCount
+      success
+      message
+    }
+  }
+`;

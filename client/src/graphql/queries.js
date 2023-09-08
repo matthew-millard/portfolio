@@ -8,6 +8,20 @@ export const GET_BLOG_POSTS = gql`
       slug
       content
       tags
+      createdAt
+    }
+  }
+`;
+
+export const GET_BLOG_POST_BY_SLUG = gql`
+  query GetBlogPostBySlug($slug: String!) {
+    getBlogPostBySlug(slug: $slug) {
+      _id
+      title
+      slug
+      content
+      tags
+      createdAt
     }
   }
 `;

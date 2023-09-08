@@ -7,7 +7,15 @@ import {
   NavLinks,
   Copyright,
 } from "./presentational";
-import { Logo, SubmitButton, LoadingOverlay, ToastNotification, CTAButton } from "./shared";
+import {
+  Logo,
+  SubmitButton,
+  LoadingOverlay,
+  ToastNotification,
+  CTAButton,
+  FeedbackButton,
+  CustomTooltip,
+} from "./shared";
 
 export {
   NavToggle,
@@ -25,4 +33,6 @@ export {
   NavLinks,
   Copyright,
   CTAButton,
+  FeedbackButton,
+  CustomTooltip,
 };

@@ -37,6 +37,10 @@
   background-color: var(--color-warning);
 }
 
+.toastContainer.notification {
+  background-color: var(--color-notification);
+}
+
 .toastContainer.fadeOut {
   animation: fadeOut 0.3s ease forwards;
 }
