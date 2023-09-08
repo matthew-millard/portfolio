@@ -4,6 +4,7 @@ import {
   faCircleCheck,
   faExclamationCircle,
   faExclamationTriangle,
+  faComments,
 } from "@fortawesome/pro-light-svg-icons";
 import styles from "./ToastNotification.module.css";
 
@@ -31,6 +32,10 @@ function ToastNotification({ message, type = "success", duration = 5000, onClose
     case "warning":
       icon = faExclamationTriangle;
       containerStyle = `${styles.toastContainer} ${styles.warning}`;
+      break;
+    case "notification":
+      icon = faComments;
+      containerStyle = `${styles.toastContainer} ${styles.notification}`;
       break;
     default:
       icon = faCircleCheck;

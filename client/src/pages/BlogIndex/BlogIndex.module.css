@@ -1,0 +1,25 @@
+.blogIndexContainer {
+  /* background-color: aqua; */
+  /* border: 1px solid var(--color-gray-100); */
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.blogTitle::before {
+  content: "- ";
+}
+
+.blogPostDate {
+  font-weight: var(--font-weight-regular);
+}

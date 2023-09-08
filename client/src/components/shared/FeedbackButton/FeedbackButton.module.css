@@ -1,0 +1,12 @@
+.feedbackButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  font-size: var(--font-size-p);
+}
+
+.feedbackButton[disabled] {
+  cursor: not-allowed;
+  color: var(--color-gray-500);
+}

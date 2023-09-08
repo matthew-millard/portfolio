@@ -19,6 +19,14 @@ const postSchema = new Schema(
       required: true,
     },
     tags: [String],
+    helpfulCount: {
+      type: Number,
+      default: 0,
+    },
+    unhelpfulCount: {
+      type: Number,
+      default: 0,
+    },
   },
   {
     timestamps: true,
