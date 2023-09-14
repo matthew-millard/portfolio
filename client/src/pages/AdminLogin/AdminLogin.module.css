@@ -1,0 +1,94 @@
+.adminContainer {
+  /* background-color: aquamarine; */
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px auto;
+  justify-items: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.heading {
+  padding: 2rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form {
+  padding: 0 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.formFieldContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  justify-items: flex-start;
+}
+
+.inputGroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  gap: 5px;
+  /* background-color: aquamarine; */
+}
+
+.passwordInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.passwordInput input {
+  width: 100%;
+  padding-right: 48px;
+}
+.passwordVisibilityButton {
+  background: none;
+  border: none;
+  color: var(--color-text);
+  position: absolute;
+  padding-right: 16px;
+  cursor: pointer;
+  font-size: var(--font-size-button);
+  width: 40px;
+}
+
+.passwordVisibilityButton:focus {
+  outline: none;
+}
+
+.submitButtonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.forgotPasswordLink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+.linkButton {
+  font-size: var(--font-size-p);
+  background: none;
+  border: none;
+  color: var(--color-text);
+  text-decoration: underline;
+  cursor: pointer;
+}
