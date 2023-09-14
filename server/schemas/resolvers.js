@@ -1,5 +1,6 @@
 /* eslint-disable import/extensions */
-import { Contact, Post } from "../models/index.js";
+import { Contact, Post, Admin } from "../models/index.js";
+import bcrypt from "bcrypt";
 
 const resolvers = {
   Query: {
@@ -71,6 +72,31 @@ const resolvers = {
           unhelpfulCount: null,
           success: false,
           message: "Your feedback could not be processed!",
+        };
+      }
+    },
+    adminLogin: async (_, { username, password }) => {
+      try {
+        const isAdmin = await Admin.findOne({ username });
+
+        if (!isAdmin) {
+          throw new Error("Invalid login credentials!");
+        }
+
+        const isPasswordCorrect = await bcrypt.compare(password, isAdmin.password);
+
+        if (!isPasswordCorrect) {
+          throw new Error("Invalid login credentials!");
+        }
+
+        return {
+          success: true,
+          message: "You have successfully logged in!",
+        };
+      } catch (err) {
+        return {
+          success: false,
+          message: err.message,
         };
       }
     },

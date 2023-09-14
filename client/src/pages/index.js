@@ -7,5 +7,21 @@ import BlogPost from "./BlogPost";
 import NotFound from "./NotFound";
 import MySetup from "./MySetup";
 import Privacy from "./Privacy";
+import AdminLogin from "./AdminLogin";
+import AdminDashboard from "./AdminDashboard";
+import ForgotPassword from "./ForgotPassword";
 
-export { Home, Contact, About, NotFound, Projects, BlogIndex, BlogPost, MySetup, Privacy };
+export {
+  Home,
+  Contact,
+  About,
+  NotFound,
+  Projects,
+  BlogIndex,
+  BlogPost,
+  MySetup,
+  Privacy,
+  AdminLogin,
+  AdminDashboard,
+  ForgotPassword,
+};

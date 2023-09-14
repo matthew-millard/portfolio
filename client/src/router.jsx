@@ -11,6 +11,9 @@ import {
   NotFound,
   MySetup,
   Privacy,
+  AdminLogin,
+  AdminDashboard,
+  ForgotPassword,
 } from "./pages";
 
 // Pages (route components)
@@ -48,6 +51,14 @@ const router = createBrowserRouter([
       {
         path: "/privacy",
         element: <Privacy />,
+      },
+      {
+        path: "/admin",
+        children: [
+          { path: "login", element: <AdminLogin /> },
+          { path: "forgot-password", element: <ForgotPassword /> },
+          { path: "dashboard", element: <AdminDashboard /> },
+        ],
       },
       {
         path: "/*",

@@ -7,8 +7,7 @@ import { useToast } from "../../../hooks/ToastContext";
 import styles from "./FeedbackButton.module.css";
 
 function FeedbackButton({ icon, value, postId }) {
-  const [updateFeedbackCount, { loading: mutationLoading, error: mutationError }] =
-    useMutation(UPDATE_FEEDBACK_COUNT);
+  const [updateFeedbackCount, { loading: mutationLoading }] = useMutation(UPDATE_FEEDBACK_COUNT);
   const [hasGivenFeedback, setHasGivenFeedback] = useState(false);
   const { setToast } = useToast();
 

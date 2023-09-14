@@ -34,6 +34,19 @@ const typeDefs = gql`
     message: String
   }
 
+  type Admin {
+    _id: ID
+    username: String
+    password: String
+    role: String
+  }
+
+  type AdminLoginResponse {
+    success: Boolean
+    message: String
+    token: String
+  }
+
   type Query {
     getBlogPosts: [Post]
     getBlogPostBySlug(slug: String!): Post
@@ -48,6 +61,8 @@ const typeDefs = gql`
     ): sendEmailResponse!
 
     updateFeedbackCount(postId: ID!, value: String!): FeedbackUpdateResponse!
+
+    adminLogin(username: String!, password: String!): AdminLoginResponse!
   }
 `;
 
