@@ -1,6 +1,7 @@
 import React from "react";
 import { AppProvider, useAppContext } from "./hooks/AppContext";
 import { ToastProvider } from "./hooks/ToastContext";
+import { AuthProvider } from "./hooks/AuthContext";
 import { Outlet } from "react-router-dom";
 import { Header, Footer, OffCanvasNav } from "./components";
 import styles from "./App.module.css";
@@ -9,7 +10,9 @@ function App() {
   return (
     <AppProvider>
       <ToastProvider>
-        <AppContent />
+        <AuthProvider>
+          <AppContent />
+        </AuthProvider>
       </ToastProvider>
     </AppProvider>
   );

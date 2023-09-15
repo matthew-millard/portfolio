@@ -36,7 +36,6 @@ export const ADMIN_LOGIN = gql`
     adminLogin(username: $username, password: $password) {
       success
       message
-      token
     }
   }
 `;

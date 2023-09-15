@@ -6,6 +6,7 @@ import { SubmitButton } from "../../components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useToast } from "../../hooks/ToastContext";
+import { useAuth } from "../../hooks/AuthContext";
 import utilStyles from "../../styles/utilities.module.css";
 import styles from "./AdminLogin.module.css";
 
@@ -19,6 +20,7 @@ function AdminLogin() {
   const { setToast } = useToast();
   const [icon, setIcon] = useState(faEyeSlash);
   const [showPassword, setShowPassword] = useState(false);
+  const { setAuthenticated } = useAuth();
 
   const togglePasswordVisibility = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
@@ -69,6 +71,7 @@ function AdminLogin() {
         setUsername("");
         setPassword("");
         setToast({ message: response.data.adminLogin.message, type: "success", duration: 5000 }); // successfully logged in
+        setAuthenticated(true); // Update the authenticated state
         navigate("/admin/dashboard");
       }
     } catch (error) {

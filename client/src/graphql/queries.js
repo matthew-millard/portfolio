@@ -25,3 +25,12 @@ export const GET_BLOG_POST_BY_SLUG = gql`
     }
   }
 `;
+
+export const IS_AUTHENTICATED = gql`
+  query IsAuthenticated {
+    isAuthenticated {
+      isAuthenticated
+      message
+    }
+  }
+`;

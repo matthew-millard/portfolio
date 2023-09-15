@@ -12,6 +12,7 @@ const GRAPHQL_URI =
 // Create the Apollo Client
 export const client = new ApolloClient({
   uri: GRAPHQL_URI,
+  credentials: "include",
   cache: new InMemoryCache(),
 });
 

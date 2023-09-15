@@ -1,4 +1,4 @@
-import { Header, Footer, DesktopNav, MobileNav } from "./container";
+import { Header, Footer, DesktopNav, MobileNav, AdminProtectedRoute } from "./container";
 import {
   NavToggle,
   OffCanvasNav,
@@ -35,4 +35,5 @@ export {
   CTAButton,
   FeedbackButton,
   CustomTooltip,
+  AdminProtectedRoute,
 };
