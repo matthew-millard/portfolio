@@ -27,7 +27,6 @@ export function AuthProvider({ children }) {
 
   const logout = async () => {
     setIsAuthenticated(false);
-    // TODO: Send a request to your server to clear the cookie
   };
 
   const setAuthenticated = (state) => {

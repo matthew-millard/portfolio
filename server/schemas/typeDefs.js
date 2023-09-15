@@ -68,6 +68,8 @@ const typeDefs = gql`
     updateFeedbackCount(postId: ID!, value: String!): FeedbackUpdateResponse!
 
     adminLogin(username: String!, password: String!): AdminLoginResponse!
+
+    adminLogout: AuthResponse!
   }
 `;
 

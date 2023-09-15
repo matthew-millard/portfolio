@@ -39,3 +39,12 @@ export const ADMIN_LOGIN = gql`
     }
   }
 `;
+
+export const ADMIN_LOGOUT = gql`
+  mutation AdminLogout {
+    adminLogout {
+      isAuthenticated
+      message
+    }
+  }
+`;
