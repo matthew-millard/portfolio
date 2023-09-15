@@ -46,9 +46,15 @@ const typeDefs = gql`
     message: String
   }
 
+  type AuthResponse {
+    isAuthenticated: Boolean!
+    message: String!
+  }
+
   type Query {
     getBlogPosts: [Post]
     getBlogPostBySlug(slug: String!): Post
+    isAuthenticated: AuthResponse!
   }
 
   type Mutation {

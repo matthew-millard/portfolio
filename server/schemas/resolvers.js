@@ -5,6 +5,23 @@ import jwt from "jsonwebtoken";
 
 const resolvers = {
   Query: {
+    isAuthenticated: async (_, __, { req }) => {
+      try {
+        const { token } = req.cookies;
+        if (!token) {
+          return { isAuthenticated: false, message: "No token provided" };
+        }
+
+        const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+        if (decoded && decoded.adminId) {
+          return { isAuthenticated: true, message: "Authenticated" };
+        }
+
+        return { isAuthenticated: false, message: "Invalid token" };
+      } catch (err) {
+        return { isAuthenticated: false, message: err.message };
+      }
+    },
     getBlogPosts: async () => {
       try {
         const posts = await Post.find({});
