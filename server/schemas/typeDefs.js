@@ -44,7 +44,6 @@ const typeDefs = gql`
   type AdminLoginResponse {
     success: Boolean
     message: String
-    token: String
   }
 
   type Query {

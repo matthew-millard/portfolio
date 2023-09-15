@@ -1,6 +1,7 @@
 /* eslint-disable import/extensions */
 import { Contact, Post, Admin } from "../models/index.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 
 const resolvers = {
   Query: {
@@ -75,7 +76,7 @@ const resolvers = {
         };
       }
     },
-    adminLogin: async (_, { username, password }) => {
+    adminLogin: async (_, { username, password }, { res }) => {
       try {
         const isAdmin = await Admin.findOne({ username });
 
@@ -88,6 +89,25 @@ const resolvers = {
         if (!isPasswordCorrect) {
           throw new Error("Invalid login credentials!");
         }
+
+        // Generate JWT
+        const token = jwt.sign(
+          { adminId: isAdmin._id, role: isAdmin.role },
+          process.env.JWT_SECRET_KEY,
+          {
+            expiresIn: "1h",
+          },
+        );
+
+        // Set JWT as a cookie
+        const isProduction = process.env.NODE_ENV === "production";
+
+        res.cookie("token", token, {
+          httpOnly: true,
+          maxAge: 3600000,
+          sameSite: isProduction ? "none" : "lax",
+          secure: isProduction, // ensure the cookie is sent over HTTPS in production
+        });
 
         return {
           success: true,
