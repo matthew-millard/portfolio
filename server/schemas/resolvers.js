@@ -137,6 +137,20 @@ const resolvers = {
         };
       }
     },
+    adminLogout: async (_, __, { res }) => {
+      try {
+        res.clearCookie("token");
+        return {
+          isAuthenticated: false,
+          message: "You have successfully logged out!",
+        };
+      } catch (err) {
+        return {
+          isAuthenticated: true,
+          message: err.message,
+        };
+      }
+    },
   },
 };
 
