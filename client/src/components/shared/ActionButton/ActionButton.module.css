@@ -1,0 +1,11 @@
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 100px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 5px;
+  color: var(--color-gray-1000);
+}

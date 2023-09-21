@@ -15,6 +15,8 @@ import {
   CTAButton,
   FeedbackButton,
   CustomTooltip,
+  Button,
+  ActionButton,
 } from "./shared";
 
 export {
@@ -36,4 +38,6 @@ export {
   FeedbackButton,
   CustomTooltip,
   AdminProtectedRoute,
+  Button,
+  ActionButton,
 };

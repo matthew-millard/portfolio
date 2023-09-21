@@ -51,6 +51,11 @@ const typeDefs = gql`
     message: String!
   }
 
+  type CreatePostResponse {
+    success: Boolean
+    message: String
+  }
+
   type Query {
     getBlogPosts: [Post]
     getBlogPostBySlug(slug: String!): Post
@@ -70,6 +75,8 @@ const typeDefs = gql`
     adminLogin(username: String!, password: String!): AdminLoginResponse!
 
     adminLogout: AuthResponse!
+
+    createPost(title: String!, content: String!): CreatePostResponse!
   }
 `;
 

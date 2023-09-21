@@ -1,0 +1,38 @@
+.button {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: var(--color-button);
+  border-radius: 4px;
+  border-width: 0;
+  color: var(--color-text);
+  cursor: pointer;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  overflow: hidden;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all 0.2s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  max-width: 200px;
+  font-size: var(--font-size-button);
+}
+
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.button:hover {
+  background-color: var(--color-button-hover);
+}
+
+.button:active {
+  background-color: var(--color-button-active);
+}

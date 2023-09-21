@@ -8,6 +8,7 @@ import {
   Contact,
   BlogIndex,
   BlogPost,
+  BlogPostEditor,
   NotFound,
   MySetup,
   Privacy,
@@ -15,6 +16,7 @@ import {
   AdminDashboard,
   ForgotPassword,
 } from "./pages";
+import { AdminProtectedRoute } from "./components";
 
 // Pages (route components)
 const router = createBrowserRouter([
@@ -57,7 +59,22 @@ const router = createBrowserRouter([
         children: [
           { path: "login", element: <AdminLogin /> },
           { path: "forgot-password", element: <ForgotPassword /> },
-          { path: "dashboard", element: <AdminDashboard /> },
+          {
+            path: "dashboard",
+            element: (
+              <AdminProtectedRoute>
+                <AdminDashboard />
+              </AdminProtectedRoute>
+            ),
+          },
+          {
+            path: "create-post",
+            element: (
+              <AdminProtectedRoute>
+                <BlogPostEditor />
+              </AdminProtectedRoute>
+            ),
+          },
         ],
       },
       {

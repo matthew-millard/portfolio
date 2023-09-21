@@ -48,3 +48,12 @@ export const ADMIN_LOGOUT = gql`
     }
   }
 `;
+
+export const CREATE_POST = gql`
+  mutation CreatePost($title: String!, $content: String!) {
+    createPost(title: $title, content: $content) {
+      success
+      message
+    }
+  }
+`;

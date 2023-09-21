@@ -1,5 +1,6 @@
 /* eslint-disable import/extensions */
 import { Contact, Post, Admin } from "../models/index.js";
+import generateSlug from "../../utils/slugHelper.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
@@ -148,6 +149,27 @@ const resolvers = {
         return {
           isAuthenticated: true,
           message: err.message,
+        };
+      }
+    },
+    createPost: async (_, { title, content }) => {
+      try {
+        const post = new Post({ title, content, slug: generateSlug(title) });
+        const savedPost = await post.save(); // This will
+
+        if (!savedPost) {
+          throw new Error("Your post could not be created!");
+        }
+
+        return {
+          success: true,
+          message: "Your post has been created!",
+        };
+      } catch (err) {
+        console.error("Error creating post:", err); // Log error occurred
+        return {
+          success: false,
+          message: "Your post could not be created!",
         };
       }
     },

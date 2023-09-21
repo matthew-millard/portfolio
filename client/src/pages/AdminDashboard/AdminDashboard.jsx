@@ -1,7 +1,8 @@
 import React from "react";
 import { useMutation } from "@apollo/client";
+import styles from "./AdminDashboard.module.css";
 import utilStyles from "../../styles/utilities.module.css";
-import { AdminProtectedRoute, SubmitButton } from "../../components";
+import { SubmitButton, Button } from "../../components";
 import { useAuth } from "../../hooks/AuthContext";
 import { ADMIN_LOGOUT } from "../../graphql/mutations";
 import { useToast } from "../../hooks/ToastContext";
@@ -29,12 +30,13 @@ function AdminDashboard() {
     }
   };
   return (
-    <AdminProtectedRoute>
-      <div className={utilStyles.minHeight}>
-        <h1>Admin Dashboard</h1>
+    <div className={utilStyles.minHeight}>
+      <h1>Admin Dashboard</h1>
+      <div className={styles.controllersGroup}>
         <SubmitButton text="Logout" handleSubmit={handleSubmit} />
+        <Button text="Create Post" link="/admin/create-post" color="var(--color-gray-700)" />
       </div>
-    </AdminProtectedRoute>
+    </div>
   );
 }
 
