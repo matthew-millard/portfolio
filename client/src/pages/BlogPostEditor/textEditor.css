@@ -1,5 +1,6 @@
 .ql-snow .ql-editor code,
 .ql-snow .ql-editor pre {
-  background-color: #e90000;
+  background-color: var(--color-gray-500);
+  color: chartreuse;
   border-radius: 3px;
 }

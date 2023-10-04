@@ -1,27 +1,56 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
+import Prism from "prismjs";
 import { GET_BLOG_POST_BY_SLUG } from "../../graphql/queries";
 import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
 import { FeedbackButton } from "../../components";
 import formatDate from "../../utils/formatDate";
-import utilsStyles from "../../styles/utilities.module.css";
+import utilStyles from "../../styles/utilities.module.css";
 import styles from "./BlogPost.module.css";
+import "prismjs/themes/prism-tomorrow.css";
+import "prismjs/components/prism-javascript";
 
 function BlogPost() {
   const { slug } = useParams();
+  const postContainerRef = useRef(null);
 
   const { loading, error, data } = useQuery(GET_BLOG_POST_BY_SLUG, {
     variables: { slug },
   });
 
+  const post = data?.getBlogPostBySlug;
+
+  const traverseNodes = useCallback((node) => {
+    for (let i = 0; i < node.childNodes.length; i++) {
+      const childNode = node.childNodes[i];
+      if (childNode.nodeType === 3 && /\S/.test(childNode.nodeValue)) {
+        const span = document.createElement("span");
+        span.className = "token-unhighlighted";
+        node.replaceChild(span, childNode);
+        span.appendChild(childNode);
+      }
+      traverseNodes(childNode);
+    }
+  }, []);
+
+  useEffect(() => {
+    Prism.highlightAll();
+
+    const timer = setTimeout(() => {
+      if (postContainerRef.current) {
+        traverseNodes(postContainerRef.current);
+      }
+    }, 0);
+
+    return () => clearTimeout(timer); // Cleanup the timer if the component gets unmounted
+  }, [post, traverseNodes]);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
-  const post = data?.getBlogPostBySlug;
-
   return (
-    <div className={utilsStyles.minHeight}>
+    <div className={`${utilStyles.minHeight} ${styles.pageContainer}`}>
       {/* Article Header */}
       <header>
         <h1>{post?.title}</h1>
@@ -29,8 +58,8 @@ function BlogPost() {
       </header>
 
       {/* Content Section */}
-      <article>
-        <p>{post?.content}</p>
+      <article className={styles.postContainer} ref={postContainerRef}>
+        <div dangerouslySetInnerHTML={{ __html: post?.content || "" }} />
       </article>
 
       {/* Feedback Section */}

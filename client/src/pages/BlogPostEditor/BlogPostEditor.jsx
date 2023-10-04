@@ -12,11 +12,26 @@ import "./textEditor.css";
 function BlogPostEditor() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [createPost, { data, loading }] = useMutation(CREATE_POST);
+  const [createPost, { loading }] = useMutation(CREATE_POST);
+
+  const processContent = (content) => {
+    const wrapper = document.createElement("div");
+    wrapper.innerHTML = content;
+    const codeBlocks = wrapper.querySelectorAll("pre");
+
+    codeBlocks.forEach((block) => {
+      const codeEl = document.createElement("code");
+      codeEl.innerHTML = block.innerHTML;
+      codeEl.classList.add("language-javascript");
+      block.innerHTML = "";
+      block.appendChild(codeEl);
+    });
+    return wrapper.innerHTML;
+  };
 
   const handleClick = () => {
-    const response = createPost({ variables: { title, content } });
-    console.log(response);
+    const processedContent = processContent(content);
+    createPost({ variables: { title, content: processedContent } });
   };
 
   return (

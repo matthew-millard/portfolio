@@ -3,7 +3,7 @@ const modules = {
     [{ header: [1, 2, 3, 4, 5, 6, false] }],
     ["bold", "italic", "underline", "strike", "blockquote"],
     [{ list: "ordered" }, { list: "bullet" }, { indent: "-1" }, { indent: "+1" }],
-    ["link", "image", "code"],
+    ["link", "image", "code-block"],
     ["clean"],
   ],
 };
@@ -19,7 +19,7 @@ const formats = [
   "indent",
   "link",
   "image",
-  "code",
+  "code-block",
 ];
 
 export { modules, formats };
