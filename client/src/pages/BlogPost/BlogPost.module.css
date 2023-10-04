@@ -1,3 +1,23 @@
+.pageContainer {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* background-color: aqua; */
+  margin-bottom: 20px;
+}
+
+.postContainer {
+  /* background-color: chartreuse; */
+  width: 100%;
+}
+
+.postContent {
+  width: 100%;
+}
+
 .feedback {
   display: flex;
   gap: 1rem;
