@@ -52,7 +52,7 @@ function BlogPost() {
   return (
     <div className={`${utilStyles.minHeight} ${styles.pageContainer}`}>
       {/* Article Header */}
-      <header>
+      <header className={styles.header}>
         <h1>{post?.title}</h1>
         <p>Published on: {formatDate(post?.createdAt)}</p>
       </header>
