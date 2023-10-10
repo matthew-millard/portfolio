@@ -14,12 +14,25 @@
   width: 100%;
 }
 
+.header {
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .postContent {
   width: 100%;
 }
 
 .feedback {
+  max-width: 300px;
+  background-color: var(--color-gray-100);
+  padding: 1rem;
+  border-radius: 0.5rem;
   display: flex;
+  justify-content: center;
   gap: 1rem;
   align-items: baseline;
+  margin-bottom: 2rem;
 }
