@@ -1,5 +1,8 @@
 import React from "react";
 import styles from "./Projects.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faRocketLaunch } from "@fortawesome/pro-light-svg-icons";
 import utilStyles from "../../styles/utilities.module.css";
 import { projects } from "./projectData";
 
@@ -21,7 +24,7 @@ function Projects() {
                     rel="noopener noreferrer"
                     className={styles.githubLink}
                   >
-                    {/* <FontAwesomeIcon icon={socialIcons[0].brand} /> */}
+                    <FontAwesomeIcon icon={faGithub} />
                   </a>
                   <a
                     href={project.url}
@@ -29,7 +32,7 @@ function Projects() {
                     rel="noopener noreferrer"
                     className={styles.githubLink}
                   >
-                    {/* <FontAwesomeIcon icon={otherIcons[0].iconName} /> */}
+                    <FontAwesomeIcon icon={faRocketLaunch} />
                   </a>
                 </div>
               </div>
